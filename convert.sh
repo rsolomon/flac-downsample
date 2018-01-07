@@ -22,10 +22,10 @@ filename=$(basename "$file")
 extension="${filename##*.}"
 
 if [ ! -f "$dest/$directory/$filename" ] && [ ! -d "$directory/$filename" ]; then
-	if [ ! -d "$dest/$directory" ]; then
+  if [ ! -d "$dest/$directory" ]; then
     echo "Creating directory $dest/$directory"
-		mkdir -p "$dest/$directory"
-	fi
+    mkdir -p "$dest/$directory"
+  fi
 
   if [ $extension == "flac" ] || [ $extension == "FLAC" ]; then
     echo "Converting $dest/$directory/$filename"
